@@ -1,0 +1,12 @@
+p {
+  font-family: Lato;
+}
+
+.swCardClass{
+  color: white;
+  border: 3px groove white;
+  margin: 2px;
+  border-radius: 1px;
+  text-align: center;
+  background-color: black;
+}

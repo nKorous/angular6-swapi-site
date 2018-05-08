@@ -1,47 +1,34 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-
-
-//Devextreme Stuff
-import { DxBoxModule, DxDataGridModule, DxButtonModule, DxSelectBoxModule} from 'devextreme-angular'
-
-//Angular Materials stuff
-import { MatCardModule } from '@angular/material'
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { MainRoutingModule } from './/main-routing.module';
-import { ErrorsComponent } from './errors/errors.component';
-import { HomeComponent } from './home/home.component';
+
+import notify from 'devextreme/ui/notify'
+import { DxButtonModule, DxSelectBoxModule, DxBoxModule } from 'devextreme-angular';
+import { GetapiService } from './getapi.service'
+
+import { MatCardModule } from '@angular/material/card'
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ErrorsComponent,
-    HomeComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
+  imports: [ 
+    BrowserModule, 
+    FormsModule,  
+    HttpClientModule,
+    BrowserAnimationsModule, 
 
-    //Materials stuff
-    MatCardModule,
-
-
-
-
-    //Devextreme stuff
-    DxBoxModule,
-    DxDataGridModule,
+    //DxModules
     DxButtonModule,
     DxSelectBoxModule,
-    MainRoutingModule
+    DxBoxModule,
 
-    
-
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    //Angular Material
+    MatCardModule
+    ],
+  declarations: [ AppComponent, ],
+  bootstrap:    [ AppComponent ],
+  providers: [GetapiService]
 })
 export class AppModule { }

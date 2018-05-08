@@ -4,8 +4,26 @@
 * the index.html has the links to the CDN housing the css files for use in stackblitz.
 */
 
-
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 @import "../node_modules/devextreme/dist/css/dx.common.css";
 @import "../node_modules/devextreme/dist/css/dx.light.css";
+
+.legalFooter {
+    font-size: 6pt; 
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+  }
+  
+  a {
+    color: white;
+  }
