@@ -10,3 +10,8 @@ p {
   text-align: center;
   background-color: black;
 }
+
+.findButton {
+  margin: 5px;
+  border: 1px solid whitesmoke;
+}

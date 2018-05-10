@@ -3,7 +3,7 @@
   <h3 style='text-align: center;'>(is freakin awesome!!!)</h3>
 </div>
 
-<div>
+<div style='text-align:center'>
   <p>
     This stackblitz project leverages the amazing SWAPI service put together
     by some awesome Star Wars lovers! You can check out the service at
@@ -14,22 +14,69 @@
 
 <dx-box direction='row'>
   <dxi-item [ratio]='1'>
-    <mat-card class='swCardClass'>People</mat-card>
+    <mat-card class='swCardClass'>
+      <mat-card-title #people (click)='hideStuff($event)'>
+        People
+      </mat-card-title>
+      <mat-card-content [hidden]='peopleHidden'>
+        Enter the name of the character you would like to find:  <br>
+        <input type='text' [(ngModel)]='findPerson' placeholder='ex. Darth Vader'>
+        <dx-button class='findButton' type='success' (onClick)='findSomething("findPerson");' text='Find Now'></dx-button>
+      </mat-card-content>
+    </mat-card>
   </dxi-item>
   <dxi-item [ratio]='1'>
-    <mat-card class='swCardClass'>Planets</mat-card>
+    <mat-card class='swCardClass'>
+      <mat-card-title #planets (click)='hideStuff($event)'>
+        Planets
+      </mat-card-title>
+      <mat-card-content [hidden]='planetHidden'>
+        Enter the name of the planet you would like to find: <br>
+        <input type='text' [(ngModel)]='findPlanet' placeholder='ex. Tatooine'>
+        <dx-button class='findButton' type='success' (onClick)='findSomething("findPlanet");' text='Find Now'></dx-button>
+      </mat-card-content>
+    </mat-card>
   </dxi-item>
   <dxi-item [ratio]='1'>
-    <mat-card class='swCardClass'>Starships</mat-card>
+    <mat-card class='swCardClass'>
+      <mat-card-title #starships (click)='hideStuff($event)'>
+        Starships
+      </mat-card-title>
+      <mat-card-content>
+        Enter the name of the starship you would like to find: <br>
+        <input type='text' [(ngModel)]='findStarship' placeholder='ex. Death Star'>
+        <dx-button class='findButton' type='success' (onClick)='findSomething("findStarship");' text='Find Now'></dx-button>
+      </mat-card-content>
+    </mat-card>
   </dxi-item>
 </dx-box>
 
 <dx-box direction='row'>
   <dxi-item [ratio]='1'>
-    <mat-card class='swCardClass'>Species</mat-card>
+    <mat-card class='swCardClass'>
+      <mat-card-title>
+        Species
+      </mat-card-title>
+
+      <mat-card-content [hidden]='peopleHidden'>
+        Enter the name of the character you would like to find:  <br>
+          <input type='text' [(ngModel)]='findPerson' placeholder='ex. Darth Vader'>
+        <dx-button class='findButton' type='success' (onClick)='findSomething("findPerson");' text='Find Now'></dx-button>
+      </mat-card-content>
+    </mat-card>
   </dxi-item>
   <dxi-item [ratio]='1'>
-    <mat-card class='swCardClass'>Films</mat-card>
+    <mat-card class='swCardClass'>
+      <mat-card-title>
+        Films
+      </mat-card-title>
+
+        <mat-card-content [hidden]='peopleHidden'>
+            Enter the name of the character you would like to find:  <br>
+            <input type='text' [(ngModel)]='findPerson' placeholder='ex. Darth Vader'>
+            <dx-button class='findButton' type='success' (onClick)='findSomething("findPerson");' text='Find Now'></dx-button>
+          </mat-card-content>
+    </mat-card>
   </dxi-item>
   <dxi-item [ratio]='1'>
     <mat-card class='swCardClass'>Vehicles</mat-card>
